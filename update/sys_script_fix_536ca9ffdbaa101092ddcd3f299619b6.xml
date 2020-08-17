@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>JS Types and Grammar</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[gs.debug('Type of undefined is -> ' + typeof undefined);
+gs.debug('Type of true is -> ' + typeof true);
+gs.debug('Type of 42 is -> ' + typeof 42);
+gs.debug('Type of "42" is -> ' + typeof "42");
+gs.debug('Type of { life: 42} is -> ' + typeof { life: 42});
+
+//ES6
+//Not yet supported by ServiceNow
+gs.debug('Type of Symbol is -> ' + typeof Symbol());
+
+gs.debug('Type of null is -> ' + typeof null); // Surprise
+
+var a = null;
+gs.debug('Check for null -> ' + (!a && typeof a === "object"));
+
+gs.debug('Type of function a(){/* . */} is -> ' + typeof function a(){/* . */});]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>nithin</sys_created_by>
+        <sys_created_on>2020-08-17 13:18:11</sys_created_on>
+        <sys_id>536ca9ffdbaa101092ddcd3f299619b6</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>JS Types and Grammar</sys_name>
+        <sys_package display_value="JS Fundamentals" source="x_171481_js_fun">53cba57fdbaa101092ddcd3f299619d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="JS Fundamentals">53cba57fdbaa101092ddcd3f299619d1</sys_scope>
+        <sys_update_name>sys_script_fix_536ca9ffdbaa101092ddcd3f299619b6</sys_update_name>
+        <sys_updated_by>nithin</sys_updated_by>
+        <sys_updated_on>2020-08-17 13:33:52</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>
